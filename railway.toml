@@ -1,0 +1,7 @@
+[build]
+# Use Nixpacks (Railway's default builder)
+builder = "nixpacks"
+
+[deploy]
+# Explicit start command for the FastAPI app
+startCommand = "uvicorn web_app.main:app --host 0.0.0.0 --port $PORT"
